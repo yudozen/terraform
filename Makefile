@@ -3,7 +3,7 @@ MAKEFILE_DIR := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
 include ${MAKEFILE_DIR}.env
 # include .env.secret
 
-TERRAFORM := docker run --rm -it \
+TERRAFORM := docker run --rm \
 	-e AWS_REGION="${AWS_DEFAULT_REGION}" \
 	-e AWS_ACCESS_KEY_ID="${TERRAFORM_AWS_ACCESS_KEY_ID}" \
 	-e AWS_SECRET_ACCESS_KEY="${TERRAFORM_AWS_SECRET_ACCESS_KEY}" \
