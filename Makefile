@@ -1,7 +1,7 @@
 MAKEFILE_DIR := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
 
 include ${MAKEFILE_DIR}.env
-include .env.secret
+# include .env.secret
 
 TERRAFORM := docker run --rm -it \
 	-e AWS_REGION="${AWS_DEFAULT_REGION}" \
