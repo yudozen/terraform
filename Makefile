@@ -36,7 +36,7 @@ terraform_init:
 		init
 
 terraform_plan:
-	docker run -it --rm \
+	docker run -t --rm \
 		-e AWS_REGION="${AWS_DEFAULT_REGION}" \
 		-e AWS_ACCESS_KEY_ID="${TERRAFORM_AWS_ACCESS_KEY_ID}" \
 		-e AWS_SECRET_ACCESS_KEY="${TERRAFORM_AWS_SECRET_ACCESS_KEY}" \
